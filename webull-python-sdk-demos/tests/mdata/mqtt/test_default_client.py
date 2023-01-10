@@ -37,7 +37,7 @@ class TestDefaultQuotesClient(unittest.TestCase):
             print("Received message '" + str(message.payload) + "' on topic '"
                   + message.topic + "' with QoS " + str(message.qos))
 
-        client = DefaultQuotesClient(your_app_key, your_app_secret, 'hk', optional_quotes_grpc_endpoint)
+        client = DefaultQuotesClient(your_app_key, your_app_secret, 'hk', optional_quotes_endpoint)
         client.init_default_settings('00700', Category.HK_STOCK.name, SubscribeType.SNAPSHOT.name)
         client.on_log = pt_logs
         client.on_message = on_message

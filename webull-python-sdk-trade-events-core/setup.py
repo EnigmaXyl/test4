@@ -20,8 +20,8 @@ with open("README.rst") as fp:
     LONG_DESCRIPTION = fp.read()
 
 requires = [
-    "grpcio==1.51.0",
-    "grpcio-tools==1.51.0",
+    "grpcio==1.51.1",
+    "grpcio-tools==1.51.1",
     "protobuf==4.21.12",
     "webull-python-sdk-core==0.1.4"
 ]
