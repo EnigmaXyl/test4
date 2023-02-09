@@ -15,10 +15,6 @@ from datetime import date
 from webullsdktrade.request.get_trade_calendar_request import TradeCalendarRequest
 
 
-def is_valid_date(datestr):
-    date.fromisoformat(datestr)
-
-
 class TradeCalendar:
 
     def __init__(self, api_client):
@@ -34,8 +30,6 @@ class TradeCalendar:
         :param start: Start date
         :param end: End date
         """
-        is_valid_date(start)
-        is_valid_date(end)
         trade_calendar_request = TradeCalendarRequest()
         trade_calendar_request.set_market(market)
         trade_calendar_request.set_start(start)
