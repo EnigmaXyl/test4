@@ -18,6 +18,7 @@ from webullsdkmdata.quotes.instrument import Instrument
 from webullsdkmdata.quotes.market_data import MarketData
 from webullsdktrade.trade.trade_instrument import TradeInstrument
 from webullsdktrade.trade.trade_calendar import TradeCalendar
+from webullsdktrade.trade.reset_operation import ResetOperation
 
 
 class API:
@@ -28,3 +29,4 @@ class API:
         self.order = OrderOperation(api_client)
         self.trade_instrument = TradeInstrument(api_client)
         self.trade_calendar = TradeCalendar(api_client)
+        self.reset_operation = ResetOperation(api_client)

@@ -179,3 +179,6 @@ class TestApi(unittest.TestCase):
         res = api.order.cancel_order(account_id, client_order_id)
         if res.status_code == 200:
             print('cancel order status:', res.json())
+        res = api.reset_operation.reset_key()
+        if res.status_code == 200:
+            print('reset key:', res.json())
